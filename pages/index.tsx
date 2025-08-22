@@ -17,13 +17,13 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <nav className={styles.nav}>
-            <Image
-              src={`${basePath}/logo_club98_weiss.png`}
-              alt="club98 logo"
-              width={60}
-              height={60}
-              className={styles.logo}
-            />
+          <Image
+            src={`${basePath}/logo_club98_weiss.png`}
+            alt="club98 logo"
+            width={60}
+            height={60}
+            className={styles.logo}
+          />
           <ul>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#engagement">Engagement</a></li>
@@ -33,6 +33,19 @@ export default function Home() {
         </nav>
       </header>
       <main className={styles.main}>
+        <section className={styles.hero}>
+          <Image
+            src={`${basePath}/play_01.jpg`}
+            alt="Floorball Riders in action"
+            fill
+            className={styles.heroImage}
+            priority
+          />
+          <div className={styles.heroText}>
+            <h1>club98</h1>
+            <p>Gönnervereinigung Floorball Riders</p>
+          </div>
+        </section>
         <section id="mitgliedschaft" className={styles.section}>
           <h2>MITGLIEDSCHAFT</h2>
           <div className={styles.membershipOptions}>
