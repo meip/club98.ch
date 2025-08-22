@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from './static.module.css';
 
 export default function Datenschutz() {
   return (
@@ -8,8 +7,8 @@ export default function Datenschutz() {
         <title>Datenschutz – club98</title>
         <meta name="description" content="Datenschutz des Club 98" />
       </Head>
-      <main className={styles.main}>
-        <h1>Datenschutz</h1>
+      <main className="max-w-3xl mx-auto p-8 leading-7">
+        <h1 className="text-2xl font-bold mb-4">Datenschutz</h1>
         <p>
           Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen
           Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer
