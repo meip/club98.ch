@@ -15,7 +15,7 @@ export default function Home() {
       <header className={styles.header}>
         <nav className={styles.nav}>
           <Image
-            src="https://static.wixstatic.com/media/c8f628_0194a2ea47ed43fca9b275df1db48e28~mv2.png"
+            src="/logo_club98_weiss.png"
             alt="club98 logo"
             width={60}
             height={60}
@@ -58,42 +58,10 @@ export default function Home() {
             Leistungssport im Zürcher Oberland.
           </p>
           <div className={styles.gallery}>
-            <Image
-              src="https://static.wixstatic.com/media/c8f628_411a1c24548c47229841ab069d0cac67~mv2.jpg"
-              alt=""
-              width={200}
-              height={150}
-            />
-            <Image
-              src="https://static.wixstatic.com/media/c8f628_b282e15c6b9d4787b43986ff0f0517d7~mv2.jpg"
-              alt=""
-              width={200}
-              height={150}
-            />
-            <Image
-              src="https://static.wixstatic.com/media/c8f628_af427fcd52294b59ad80f67ecced04ea~mv2.jpg"
-              alt=""
-              width={200}
-              height={150}
-            />
-            <Image
-              src="https://static.wixstatic.com/media/c8f628_eb7d23634251477487e3b129819c090e~mv2.jpg"
-              alt=""
-              width={200}
-              height={150}
-            />
-            <Image
-              src="https://static.wixstatic.com/media/c8f628_49755cc050e84dd88398e50b9ffa3ada~mv2.jpg"
-              alt=""
-              width={200}
-              height={150}
-            />
-            <Image
-              src="https://static.wixstatic.com/media/c8f628_1640a183c81a471e848a5464dd0db8d2~mv2.jpg"
-              alt=""
-              width={200}
-              height={150}
-            />
+            <Image src="/play_01.jpg" alt="" width={200} height={150} />
+            <Image src="/play_02.jpg" alt="" width={200} height={150} />
+            <Image src="/play_03.jpg" alt="" width={200} height={150} />
+            <Image src="/play_04.jpg" alt="" width={200} height={150} />
           </div>
         </section>
         <section id="ueber-uns" className={styles.section}>

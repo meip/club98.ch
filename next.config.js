@@ -2,8 +2,7 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true,
-    domains: ['static.wixstatic.com']
+    unoptimized: true
   },
   trailingSlash: true
 };
