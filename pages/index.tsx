@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './index.module.css';
 
 export default function Home() {
+  const { basePath } = useRouter();
   return (
     <>
       <Head>
@@ -14,13 +17,13 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <nav className={styles.nav}>
-          <Image
-            src="/logo_club98_weiss.png"
-            alt="club98 logo"
-            width={60}
-            height={60}
-            className={styles.logo}
-          />
+            <Image
+              src={`${basePath}/logo_club98_weiss.png`}
+              alt="club98 logo"
+              width={60}
+              height={60}
+              className={styles.logo}
+            />
           <ul>
             <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
             <li><a href="#engagement">Engagement</a></li>
@@ -58,10 +61,10 @@ export default function Home() {
             Leistungssport im Zürcher Oberland.
           </p>
           <div className={styles.gallery}>
-            <Image src="/play_01.jpg" alt="" width={200} height={150} />
-            <Image src="/play_02.jpg" alt="" width={200} height={150} />
-            <Image src="/play_03.jpg" alt="" width={200} height={150} />
-            <Image src="/play_04.jpg" alt="" width={200} height={150} />
+            <Image src={`${basePath}/play_01.jpg`} alt="" width={200} height={150} />
+            <Image src={`${basePath}/play_02.jpg`} alt="" width={200} height={150} />
+            <Image src={`${basePath}/play_03.jpg`} alt="" width={200} height={150} />
+            <Image src={`${basePath}/play_04.jpg`} alt="" width={200} height={150} />
           </div>
         </section>
         <section id="ueber-uns" className={styles.section}>
@@ -102,12 +105,12 @@ export default function Home() {
             <button type="submit">Absenden</button>
           </form>
         </section>
-        <footer className={styles.footer}>
-          <p>
-            <a href="/impressum">Impressum</a> | <a href="/datenschutz">Datenschutz</a>
-          </p>
-          <p>© 2022 CLUB98. Erstellt mit Wix.com</p>
-        </footer>
+          <footer className={styles.footer}>
+            <p>
+              <Link href="/impressum">Impressum</Link> | <Link href="/datenschutz">Datenschutz</Link>
+            </p>
+            <p>© 2022 CLUB98. Erstellt mit Wix.com</p>
+          </footer>
       </main>
     </>
   );
