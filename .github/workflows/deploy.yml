@@ -42,9 +42,9 @@ jobs:
     if: github.event_name == 'pull_request'
     environment:
       name: pr-${{ github.event.pull_request.number }}
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy-preview.outputs.preview_url }}
     steps:
       - uses: actions/deploy-pages@v4
-        id: deploy
+        id: deploy-preview
         with:
           preview: true
