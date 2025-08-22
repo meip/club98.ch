@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './index.module.css';
 
 export default function Home() {
@@ -136,7 +137,7 @@ export default function Home() {
         </section>
         <footer className={styles.footer}>
           <p>
-            <a href="/impressum">Impressum</a> | <a href="/datenschutz">Datenschutz</a>
+            <Link href="/impressum">Impressum</Link> | <Link href="/datenschutz">Datenschutz</Link>
           </p>
           <p>© 2022 CLUB98. Erstellt mit Wix.com</p>
         </footer>
