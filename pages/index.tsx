@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Layout from '../components/Layout';
 
 export default function Home() {
   const { basePath } = useRouter();
@@ -14,24 +14,8 @@ export default function Home() {
           content="Offizielle Seite des Club 98, der Gönnervereinigung der Floorball Riders."
         />
       </Head>
-      <header className="bg-gray-800 text-white sticky top-0 z-50">
-        <nav className="flex items-center justify-between max-w-6xl mx-auto p-4">
-          <Image
-            src={`${basePath}/logo_club98_weiss.png`}
-            alt="club98 logo"
-            width={60}
-            height={60}
-          />
-          <ul className="flex gap-4 uppercase font-semibold">
-            <li><a href="#mitgliedschaft" className="hover:text-sky-400">Mitgliedschaft</a></li>
-            <li><a href="#engagement" className="hover:text-sky-400">Engagement</a></li>
-            <li><a href="#ueber-uns" className="hover:text-sky-400">Über uns</a></li>
-            <li><a href="#kontakt" className="hover:text-sky-400">Kontakt</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main className="text-center">
-        <section className="relative flex items-center justify-center h-[60vh] text-white">
+      <Layout>
+        <section className="relative flex flex-col items-center justify-center h-[60vh] text-white text-center">
           <Image
             src={`${basePath}/play_01.jpg`}
             alt="Floorball Riders in action"
@@ -45,18 +29,18 @@ export default function Home() {
             <p className="text-lg">Gönnervereinigung Floorball Riders</p>
           </div>
         </section>
-        <section id="mitgliedschaft" className="py-16 px-4 max-w-5xl mx-auto">
+        <section id="mitgliedschaft" className="py-16 px-4 max-w-5xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-8">MITGLIEDSCHAFT</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="border border-sky-600 p-4 w-48 bg-gray-800 text-white">
+            <div className="border border-sky-600 p-4 w-48 bg-brand text-white">
               <h3 className="font-semibold">Einzelperson / Ehepaar</h3>
               <p>Fr. 333.00 / Fr. 555.00</p>
             </div>
-            <div className="border border-sky-600 p-4 w-48 bg-gray-800 text-white">
+            <div className="border border-sky-600 p-4 w-48 bg-brand text-white">
               <h3 className="font-semibold">Firma</h3>
               <p>Fr. 999.00</p>
             </div>
-            <div className="border border-sky-600 p-4 w-48 bg-gray-800 text-white">
+            <div className="border border-sky-600 p-4 w-48 bg-brand text-white">
               <h3 className="font-semibold">Open</h3>
               <p>ab Fr. 333.00</p>
             </div>
@@ -109,13 +93,7 @@ export default function Home() {
             <button type="submit" className="p-2 bg-sky-700 text-white">Absenden</button>
           </form>
         </section>
-        <footer className="text-center py-8 bg-gray-800 text-white">
-          <p>
-            <Link href="/impressum">Impressum</Link> | <Link href="/datenschutz">Datenschutz</Link>
-          </p>
-          <p>© 2022 CLUB98.</p>
-        </footer>
-      </main>
+      </Layout>
     </>
   );
 }
